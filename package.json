@@ -1,0 +1,23 @@
+{
+  "name": "pom-cypress-e2e",
+  "version": "1.0.0",
+  "description": "Applying Page Object Model with Cypress to End to End Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress:open"
+  },
+  "keywords": [
+    "cypress",
+    "test",
+    "pom",
+    "e2e"
+  ],
+  "author": "Omar Centeno <ODCenteno>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.1.0"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
+  }
+}
