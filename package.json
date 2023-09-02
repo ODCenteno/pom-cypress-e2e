@@ -4,7 +4,9 @@
   "description": "Applying Page Object Model with Cypress to End to End Testing",
   "main": "index.js",
   "scripts": {
-    "test": "cypress:open"
+    "test": "cypress:open",
+    "cypress:login": "npx cypress run --spec cypress/e2e/shop-tests/login.cy.js",
+    "cypress:register": "npx cypress run --spec cypress/e2e/shop-tests/register.cy.js"
   },
   "keywords": [
     "cypress",
@@ -15,7 +17,8 @@
   "author": "Omar Centeno <ODCenteno>",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^13.1.0"
+    "cypress": "^13.1.0",
+    "mochawesome": "^7.1.3"
   },
   "dependencies": {
     "faker": "^5.5.3"
