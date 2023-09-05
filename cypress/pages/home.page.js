@@ -4,7 +4,8 @@ export class HomePage {
     email: '#input-email',
     password: '#input-password',
     loginButton: '[value="Login"]',
-    registrationBtn: '.well > a'
+    registrationBtn: '.well > a',
+    addToCartBtn: '#content > div:nth-child(8) > div:nth-child(1) > div > div:nth-child(2) > div.button-group > button:nth-child(1)'
   }
 
   openURL() {
@@ -32,6 +33,16 @@ export class HomePage {
     cy.get(this.webLocators.registrationBtn).click();
     cy.location('search').should('eql', '?route=account/register');
     cy.contains('Register Account');
+  }
+
+  searchProduct(promt) {
+    cy.get(this.search).type(promt);
+    cy.location('search').should('eql', `?route=product/search&search=${promt}`);
+  }
+
+  addProductToCart() {
+    cy.get(this.addToCartBtn).click();
+    cy.contains('Success: You have added')
   }
 }
 
