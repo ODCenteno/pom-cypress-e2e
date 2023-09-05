@@ -12,7 +12,7 @@ describe('Home Page testing suite', () => {
       NewHomePage.typePassword(userData.password);
       NewHomePage.clicLogin();
       NewHomePage.confirmAccess()
-    })
+    }) 
   })
 
   context('New user button', () => {
