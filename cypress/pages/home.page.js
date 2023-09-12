@@ -7,7 +7,9 @@ export class HomePage {
     loginButton: '[value="Login"]',
     registrationBtn: '.well > a',
     addToCartBtn: '#content > div:nth-child(8) > div:nth-child(1) > div > div:nth-child(2) > div.button-group > button:nth-child(1)',
-    successMessage: '.alert'
+    successMessage: '.alert',
+    cartTotalBtn: '#cart-total',
+    clearCartBtn: ':nth-child(5) > .btn'
   }
 
   openURL() {
@@ -49,6 +51,11 @@ export class HomePage {
   
   verifySuccessMessage() {
     return cy.get(this.webLocators.successMessage);
+  }
+
+  clearCartItems() {
+    cy.get(this.webLocators.cartTotalBtn).click();
+    cy.get(this.webLocators.clearCartBtn).click();
   }
 }
 

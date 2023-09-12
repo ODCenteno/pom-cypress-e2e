@@ -8,7 +8,7 @@ describe('User Journey through the ecommerce', () => {
     cy.login(userData.email, userData.password);
   })
 
-  it('should search for a Apple product', () => {
+  it('should search for a product', () => {
     NewHomePage.searchProduct(testData.productName)
       .should('eql', `?route=product/search&search=${testData.productName}`);
   })
@@ -19,5 +19,8 @@ describe('User Journey through the ecommerce', () => {
     NewHomePage.verifySuccessMessage()
       .should('contain', `Success: You have added ${testData.productName}`);
   })
-  
+
+  after(() => {
+    NewHomePage.clearCartItems()
+  })
 })

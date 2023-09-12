@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress:open",
-    "cypress:login": "npx cypress run --spec cypress/e2e/shop-tests/login.cy.js",
-    "cypress:register": "npx cypress run --spec cypress/e2e/shop-tests/register.cy.js"
+    "test:login": "npx cypress run --spec cypress/e2e/shop-tests/login.cy.js",
+    "test:register": "npx cypress run --spec cypress/e2e/shop-tests/register.cy.js",
+    "test:addToCart": "npx cypress run --spec cypress/e2e/shop-tests/addToCart.cy.js"
   },
   "keywords": [
     "cypress",
